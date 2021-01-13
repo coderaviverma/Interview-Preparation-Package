@@ -1,0 +1,10 @@
+
+.gitignore
+.idea/inspectionProfiles/
+.idea/kotlinc.xml
+.idea/libraries/
+.idea/uiDesigner.xml
+DS-Algo.iml
+out/
+/.idea/
+Interview-Preparation-Package.iml

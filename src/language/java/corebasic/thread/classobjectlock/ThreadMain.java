@@ -1,4 +1,4 @@
-package language.java.corebasic.thread;
+package language.java.corebasic.thread.classobjectlock;
 
 public class ThreadMain {
 

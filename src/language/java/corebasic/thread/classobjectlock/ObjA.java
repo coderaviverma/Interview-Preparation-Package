@@ -1,9 +1,9 @@
 package language.java.corebasic.thread.classobjectlock;
 
-public class ObjA  {
+public class ObjA {
 
 
-     synchronized void m1(){
+    synchronized void m1() {
 
         try {
             System.out.println("m1 Running....");
@@ -14,7 +14,18 @@ public class ObjA  {
         }
     }
 
-     synchronized void m2(){
+    void m5() {
+
+        try {
+            System.out.println("m5 Running....");
+            Thread.sleep(10000);
+            System.out.println("m5 End....");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    synchronized void m2() {
 
         try {
             System.out.println("m2 Running....");
@@ -29,7 +40,7 @@ public class ObjA  {
     }
 
 
-    synchronized static void m3(){
+    synchronized static void m3() {
 
 
         try {
@@ -44,7 +55,7 @@ public class ObjA  {
 
     }
 
-    synchronized static void m4(){
+    synchronized static void m4() {
 
 
         try {
@@ -58,7 +69,6 @@ public class ObjA  {
         }
 
     }
-
 
 
 }

@@ -13,5 +13,6 @@ public class Thread3 implements Runnable {
     public void run() {
 
         objA.m3();
+//        objA.m5();
     }
 }

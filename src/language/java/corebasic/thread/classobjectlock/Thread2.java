@@ -11,7 +11,7 @@ public class Thread2 implements Runnable {
 
     @Override
     public void run() {
-
-        objA.m2();
+        objA.m1();
+//        objA.m2();
     }
 }

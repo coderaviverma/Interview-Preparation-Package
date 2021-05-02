@@ -16,7 +16,7 @@ public class ThreadMain {
         t2.start();
 
 
-        //Class Level Lock on Method m3 & m4. Will run one by one
+        //Class Level Lock on Method m3 & m4. Will run one by one // Static method
 //        Thread t3 = new Thread(new Thread3(objA));
 //        t3.start();
 //        Thread t4 = new Thread(new Thread4(objB));

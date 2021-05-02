@@ -12,7 +12,7 @@ public class Thread4 implements Runnable {
     @Override
     public void run() {
 
-//        objA.m3();
+//        objA.m5();
         objA.m4();
     }
 }

@@ -18,4 +18,9 @@ public class B extends A {
     void m3(){
         System.out.println("M3 A");
     }
+
+
+    void m5() throws NullPointerException{
+        System.out.println("M3 A");
+    }
 }

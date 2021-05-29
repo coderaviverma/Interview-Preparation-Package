@@ -18,5 +18,8 @@ public class A {
     void m3(){
         System.out.println("M3 A");
     }
+    void m5(){
+        System.out.println("M3 A");
+    }
 
 }

@@ -8,56 +8,42 @@ public class Demo {
 
     public static void main(String[] args) {
 
-//        Map<Integer, String> courseDetails = new HashMap<>();
-//        courseDetails.put(100, "Physics");
-//        courseDetails.put(200, "Chemistry");
-//        courseDetails.put(300, "Mathematics");
-//        courseDetails.put(400, "Computer");
-//        courseDetails.put(500, "Electronics");
-//        courseDetails.put(600, "Hindi");
+        int[] a = {1, 3, 5, 6, 7, 4};
 
-        //Keys should be greater than 200
-        //key should be appended with 01  -  30001
-        //value shoould be appended with name
-        //oputput should be in MAP
-
-//        courseDetails=  courseDetails.entrySet().stream()
-//                .filter(k-> k.getKey()>200)
-//                .map(k-> ((k.getKey() * 10) + 1))
-//                .collect(Collectors.toMap(Integer::));
-
-
-        int[] a = {1, 2, 3, 4, 5,0,1};
-        int[] b=new int[a.length];
-//        long product=1;
-
-//        for (int b:a){
-//            if (b>1){
-//                product=product*b;
-//            }
-//        }
-
-        for (int i = 0; i < a.length; i++) {
-            int product = 1;
-
-            for (int j = 0; j < a.length; j++) {
-
-                if (i == j) {
-
-                } else {
-                    product = product * a[j];
-                }
-            }
-
-            b[i] = product;
-        }
-
-        for (int c:b){
-            System.out.print(c+" ");
-        }
-
+        solve(a,13);
 
     }
 
+    private static void solve(int[] a, int target) {
 
+        int v1, v2, v3;
+        int n = a.length;
+        int tar = target;
+        boolean foundSum = false;
+        Map<Integer, Integer> hm = new HashMap<>();//On
+
+        for (int i = 0; i < n; i++) {
+            hm.put(a[i], i);
+        }
+
+        for (int i = 0; i < n; i++) {//On^2
+
+            for (int j = i + 1; j < n; j++) {
+
+                int sub = tar - (a[i] + a[j]);
+
+                if (hm.containsKey(sub)) {
+                    v1 = a[i];
+                    v2 = a[j];
+                    v3 = sub;
+                    System.out.println(v1 + "," + v2 + "," + v3);
+                    foundSum = true;
+                    break;
+                }
+
+                if (foundSum)
+                    break;
+            }
+        }
+    }
 }

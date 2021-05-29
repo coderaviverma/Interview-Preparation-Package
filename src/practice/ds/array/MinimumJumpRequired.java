@@ -1,18 +1,17 @@
 package practice.ds.array;
 
-class Solution {
+class MinimumJumpRequired {
 
     public static void main(String[] args) {
 
-        int[] a={2,3,5,1,1,1,4};
+                int[] a={2,3,5,1,1,1,4};
 
-        Solution s=new Solution();
-        System.out.println("Minimum jumps required - "+s.jump(a));
-        System.out.println("Minimum jumps2 required - "+s.jump2(a));
+                MinimumJumpRequired s=new MinimumJumpRequired();
+                System.out.println("Minimum jumps required - "+s.jump(a));
+                System.out.println("Minimum jumps2 required - "+s.jump2(a));
 
     }
     public int jump(int[] nums) {
-        
         return jump(nums,nums.length,0);
     }
     

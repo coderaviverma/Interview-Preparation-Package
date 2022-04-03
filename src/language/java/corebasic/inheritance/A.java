@@ -19,7 +19,7 @@ public class A {
         System.out.println("M3 A");
     }
     void m5(){
-        System.out.println("M3 A");
+        System.out.println("M5 A");
     }
 
 }

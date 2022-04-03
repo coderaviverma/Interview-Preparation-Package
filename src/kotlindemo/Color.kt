@@ -1,6 +1,6 @@
-package kotlindemo
-
-enum class Color(i:Int) {
-    BLACK(0),
-    BLUE(1)
-}
+//package kotlindemo
+//
+//enum class Color(i:Int) {
+//    BLACK(0),
+//    BLUE(1)
+//}

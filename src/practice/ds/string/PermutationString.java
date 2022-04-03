@@ -1,6 +1,8 @@
 package practice.ds.string;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class PermutationString {
 
@@ -9,13 +11,13 @@ public class PermutationString {
         String a = "abc";
         String b = "";
         ArrayList<String> ls = new ArrayList<>();
-//        System.out.println(permutation(b, a, ls));
+        System.out.println(permutation(b, a, ls));
 
         System.out.println("--------------------------------------------------");
 
         int[] arr = {1, 2, 3};
 
-        arrPermutation(arr);
+//        arrPermutation(arr);
     }
 
     public static ArrayList<String> permutation(String prefix, String suffix, ArrayList<String> list) {
@@ -26,7 +28,7 @@ public class PermutationString {
 
             for (int i = 0; i < suffix.length(); i++) {
 
-                permutation(prefix + suffix.charAt(i), suffix.substring(0, i) + suffix.substring(i + 1, suffix.length()), list);
+                permutation(prefix + suffix.charAt(i), suffix.substring(0, i) + suffix.substring(i + 1), list);
             }
         }
 
@@ -34,14 +36,14 @@ public class PermutationString {
     }
 
     private static void arrPermutation(int[] a) {
-        ArrayList<int[]> ls = new ArrayList<>();
+        Set<int[]> ls = new HashSet<>();
         int start = 0;
         permutations(a, start, ls);
 
         ls.forEach(o -> System.out.println(o[0]+","+o[1]+","+o[2]));
     }
 
-    private static void permutations(int[] a, int start, ArrayList<int[]> ls) {
+    private static void permutations(int[] a, int start, Set<int[]> ls) {
 
         if (start >= a.length) {
             ls.add(a.clone());
